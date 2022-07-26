@@ -8,18 +8,19 @@ on:
 jobs:
   challenging:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+    steps:  
       - name: Adciona Usuário
         run: |
           curl -X POST https://qlqr-nome.herokuapp.com/add \
           -H "Content-Type: application/json" \
           -d '{"user": {"name": "Rodrigo","email": "rodrigolfranca@gmail.com"}}'
+
       - name: Lista Todos os Usuários
         run: curl https://qlqr-nome.herokuapp.com/
+
       - name: Gera Pull-Request
         run: |
-          curl 
+          git remote add origin https://github.com/rodrigolfranca/desafioGitActions.git
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: Syncing branches
