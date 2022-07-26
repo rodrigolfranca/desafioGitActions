@@ -5,11 +5,11 @@ on:
     branches:
       - release
 
-
 jobs:
   challenging:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Adciona Usuário
         run: |
           curl -X POST https://qlqr-nome.herokuapp.com/add \
@@ -18,9 +18,11 @@ jobs:
       - name: Lista Todos os Usuários
         run: curl https://qlqr-nome.herokuapp.com/
       - name: Gera Pull-Request
+        run: |
+          curl 
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: Syncing branches
-          title: Keep main up-to-date with release
+          title: Keep master and release synced
           branch: master
           base: release
