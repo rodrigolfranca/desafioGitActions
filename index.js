@@ -25,9 +25,10 @@ app.get('/', (req, res) => {
 app.post('/add', (req, res) => {
 
     
-    const { users } = req.body;
-    console.log(users);
+    const { user } = req.body;
     try {
+        const users = readData()
+        users.push(user)
         writeData(users);
         res.status(200).json({'message':'Data Updated.'});
     } catch(error) {
