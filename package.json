@@ -2,6 +2,24 @@
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
-    "express": "^4.18.1"
-  }
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  },
+  "name": "git-actions-challenge",
+  "description": "Você está construindo uma API para inserir as informações de usuário, juntamente com um grupo. Como é de prática, nesse repositório vocês optaram por trabalhar com duas branchs: master e release. Sempre que alguém finaliza uma tarefa importante (como inserir um novo endpoint), o push é feito diretamente na branch release e um pull request é aberto manualmente para enviar essas alterações para a branch principal.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigolfranca/desafioGitActions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigolfranca/desafioGitActions/issues"
+  },
+  "homepage": "https://github.com/rodrigolfranca/desafioGitActions#readme"
 }
