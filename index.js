@@ -37,4 +37,4 @@ app.post('/add', (req, res) => {
 
 });
 
-app.listen(80, () => console.log("Servidor Aberto em 80"));
+app.listen(process.env.PORT, () => console.log("Servidor Aberto em "+process.env.PORT));
