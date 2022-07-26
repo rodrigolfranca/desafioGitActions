@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 });
 
-app.post('/', (req, res) => {
+app.post('/add', (req, res) => {
 
     
     const { users } = req.body;
@@ -36,3 +36,5 @@ app.post('/', (req, res) => {
     }
 
 });
+
+app.listen(4000, () => console.log("Servidor Aberto em 4000"));
