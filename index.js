@@ -37,4 +37,4 @@ app.post('/add', (req, res) => {
 
 });
 
-app.listen(4000, () => console.log("Servidor Aberto em 4000"));
+app.listen(80, () => console.log("Servidor Aberto em 80"));
