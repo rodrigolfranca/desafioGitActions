@@ -18,9 +18,10 @@ jobs:
       - name: Lista Todos os Usuários
         run: curl https://qlqr-nome.herokuapp.com/
 
+      - name: setting origin
+        run: git remote add origin https://github.com/rodrigolfranca/desafioGitActions.git
+
       - name: Gera Pull-Request
-        run: |
-          git remote add origin https://github.com/rodrigolfranca/desafioGitActions.git
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: Syncing branches
