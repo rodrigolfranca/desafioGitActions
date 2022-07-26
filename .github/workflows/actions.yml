@@ -1,0 +1,26 @@
+name: GitHub Actions Challenge Accept
+
+on:
+  push:
+    branches:
+      - release
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Adciona Usuário
+        run: |
+          curl -X POST https://qlqr-nome.herokuapp.com/add \
+          -H "Content-Type: application/json" \
+          -d '{"user": {"name": "Rodrigo","email": "rodrigolfranca@gmail.com"}}'
+      - name: Lista Todos os Usuários
+        run: curl https://qlqr-nome.herokuapp.com/
+      - name: Gera Pull-Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: Syncing branches
+          title: Keep main up-to-date with release
+          branch: master
+          base: release
